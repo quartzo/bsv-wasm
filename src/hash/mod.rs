@@ -20,9 +20,6 @@ use serde::*;
 use sha1::Sha1;
 use sha2::{Sha256, Sha512};
 
-use self::hash160_digest::Hash160;
-use self::sha256d_digest::Sha256d;
-
 #[derive(Debug, Default, Clone, PartialEq, Eq, Serialize, Deserialize)]
 pub struct Hash(#[serde(serialize_with = "to_hex", deserialize_with = "from_hex")] pub(crate) Vec<u8>);
 
